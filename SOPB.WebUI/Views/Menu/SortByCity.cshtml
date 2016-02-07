@@ -1,0 +1,16 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewBag.Title = "Поиск контактных данных по заданному городу";
+}
+
+<h2>Поиск контактных данных по городу</h2>
+
+@using (Html.BeginForm("List", "Contact"))
+{
+    <fieldset>
+        <b>Выберите название города: </b>
+        @Html.DropDownList("city", new SelectList(Model))
+        <input class="btn alert-info" type="submit" value="Отобразить" />
+    </fieldset>
+}

@@ -1,0 +1,27 @@
+﻿@using System.Runtime.Remoting.Messaging
+@using SOPB.WebUI.HtmlHelpers
+@using SOPB.WebUI.Models
+@model SOPB.WebUI.Models.ContactListViewModel
+
+@{
+    ViewBag.Title = "Контакты";
+}
+
+<h1 align="center">Список контактов</h1>
+@foreach (var c in Model.Contacts)
+{
+    Html.RenderPartial("ContactSummary", c);
+}
+
+@using (Html.BeginForm("List", "Contact"))
+{
+    <fieldset>
+        <b>Выберите количество контактов, которое будет отображаться на странице: </b>
+        @Html.DropDownList("items", new SelectList(new[] { 1, 2, 3, 4, 7, 9, 10, 15, 20, 25, 50, 100 }))
+        <input class="btn alert-info" type="submit" value="Отобразить" />
+    </fieldset>
+}
+
+<div class="pager">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, items = Model.PagingInfo.ItemsPerPage, city = Model.CurrentCity, function = Model.CurrentFunction }))
+</div>

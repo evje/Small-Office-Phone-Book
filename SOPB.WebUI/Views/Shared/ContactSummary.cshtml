@@ -1,0 +1,34 @@
+﻿@model SOPB.Domain.Entities.Contact
+
+<div class="well">
+    <h2><strong>@Model.LastName @Model.FirstName</strong></h2>
+    <h3><span class="label-info">@Model.Function в @Model.City</span></h3>
+    @if (Model.WorkNumber != null)
+    {
+        <p class="lead">Номер рабочего телефона: @Model.WorkNumber</p>
+    }
+    @if (Model.WorkEmail != null)
+    {
+        <p class="lead">Рабочий e-mail: @Model.WorkEmail</p>
+    }
+    @if (Model.WorkAdress != null)
+    {
+        <p class="lead">Адрес офиса: @Model.WorkAdress</p>
+    }
+    @if (Model.MobileNumber != null)
+    {
+        <p class="lead">Номер мобильного телефона: @Model.MobileNumber</p>
+    }
+    @if (Model.HomeNumber != null)
+    {
+        <p class="lead">Номер домашнего телефона: @Model.HomeNumber</p>
+    }
+    @if (Model.PersonalEmail != null)
+    {
+        <p class="lead">Личный e-mail: @Model.PersonalEmail</p>
+    }
+    @if (Model.PersonalLink != null)
+    {
+        <p class="lead">Личная страница: @Model.PersonalLink</p>
+    }
+</div>

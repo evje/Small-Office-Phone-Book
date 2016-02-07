@@ -1,0 +1,24 @@
+﻿@if (Request.IsAuthenticated && User.IsInRole("admin"))
+    {
+        @Html.ActionLink("Управление списком контактов", "ListAllForCRUD", "Contact", null, new { @class = "btn btn-block btn-danger btn-lg" })
+    }
+
+@if (Request.IsAuthenticated)
+{
+    @Html.ActionLink("Просмотр всех контактов", "List", "Contact", null, new { @class = "btn btn-block btn-success btn-lg" })
+}
+
+@if (Request.IsAuthenticated)
+{
+    @Html.ActionLink("Поиск по фамилии", "FindByLastName", "Menu", null, new { @class = "btn btn-block btn-success btn-lg" })
+}
+
+
+@Html.ActionLink("Поиск по городу", "SortByCity", "Menu", null, new { @class = "btn btn-block btn-info btn-lg" })
+
+@Html.ActionLink("Поиск по должности", "SortByFunction", "Menu", null, new { @class = "btn btn-block btn-info btn-lg" })
+
+@if (Request.IsAuthenticated && User.IsInRole("admin"))
+    {
+        @Html.ActionLink("Управление пользователями", "ListAllUsers", "Account", null, new { @class = "btn btn-block btn-danger btn-lg" })
+    }

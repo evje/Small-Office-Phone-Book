@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOPB.Domain", "SOPB.Domain\SOPB.Domain.csproj", "{1AC2F0B2-1BD2-47C1-B9E5-1542AE76BC0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOPB.UnitTests", "SOPB.UnitTests\SOPB.UnitTests.csproj", "{D7752B3A-713B-4E73-BE87-6D980EA1318E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOPB.WebUI", "SOPB.WebUI\SOPB.WebUI.csproj", "{44A16658-833C-4496-9437-1F2E08D728DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AC2F0B2-1BD2-47C1-B9E5-1542AE76BC0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AC2F0B2-1BD2-47C1-B9E5-1542AE76BC0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AC2F0B2-1BD2-47C1-B9E5-1542AE76BC0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AC2F0B2-1BD2-47C1-B9E5-1542AE76BC0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7752B3A-713B-4E73-BE87-6D980EA1318E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7752B3A-713B-4E73-BE87-6D980EA1318E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7752B3A-713B-4E73-BE87-6D980EA1318E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7752B3A-713B-4E73-BE87-6D980EA1318E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44A16658-833C-4496-9437-1F2E08D728DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44A16658-833C-4496-9437-1F2E08D728DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44A16658-833C-4496-9437-1F2E08D728DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44A16658-833C-4496-9437-1F2E08D728DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

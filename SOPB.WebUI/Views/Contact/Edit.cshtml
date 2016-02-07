@@ -1,0 +1,41 @@
+﻿@model SOPB.Domain.Entities.Contact
+
+@{
+    ViewBag.Title = "Редактидование: " + @Model.LastName + @Model.FirstName;
+    Layout = "~/Views/Shared/_CRUDLayout.cshtml";
+}
+
+<div class="panel">
+
+    <div class="page-heading">
+        <h2>Редактирование @Model.LastName @Model.FirstName</h2>
+    </div>
+
+    @using (Html.BeginForm("Edit", "Contact"))
+    {
+        <div class="panel-body">
+            @Html.HiddenFor(x => x.ContactId)
+            @foreach (var property in ViewData.ModelMetadata.Properties)
+            {
+                if (property.PropertyName != "ContactId")
+                {
+                    <div class="form-group">
+                        <label>@(property.DisplayName ?? property.PropertyName)</label>
+                        @Html.TextBox(property.PropertyName, null, new {@class = "form-control"})
+                        @Html.ValidationMessage(property.PropertyName)
+                    </div>
+                }
+            }
+        </div>
+
+        <div class="panel-footer">
+            <input type="submit" class="btn btn-primary" value="Сохранить изменения контакта"/>
+            @Html.ActionLink("Отмена", "ListAllForCRUD", null, new { @class = "btn btn-info btn-lg" })
+        </div>
+    }
+
+</div>
+
+
+
+

@@ -1,0 +1,18 @@
+﻿@using System.Runtime.Remoting.Messaging
+@using SOPB.WebUI.HtmlHelpers
+@using SOPB.WebUI.Models
+@model SOPB.WebUI.Models.ContactListViewModel
+
+@{
+    ViewBag.Title = "Контакты";
+}
+
+<h2>Список контактов</h2>
+@foreach (var c in Model.Contacts)
+{
+    Html.RenderPartial("ContactSummary", c);
+}
+
+<div class="pager">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, items = Model.PagingInfo.ItemsPerPage, city = Model.CurrentCity, function = Model.CurrentFunction }))
+</div>
